@@ -1,0 +1,8 @@
+services:
+  model-trainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: model_trainer
+    volumes:
+      - ./results:/app/results
