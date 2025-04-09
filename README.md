@@ -76,3 +76,10 @@ Then copy it:
 
 ```bash
 cp ../train/results/best_model.pkl model/
+
+### ▶️ Build & Run:
+
+```bash
+cd train
+docker compose up --build
+```
