@@ -26,6 +26,17 @@ The goal is to predict whether a customer will subscribe to a product **before m
   - XGBoost
 - Selects and saves the **best model** based on accuracy
 
+## Structure
+
+train/ 
+├── Dockerfile 
+├── docker-compose.yml │ 
+├── train_model.py │ 
+├── requirements.txt │ 
+└── data/ 
+    └── bank-full.csv │  
+└── results/ 
+
 ### 📦 Output:
 
 - Saved in `train/results/best_model.pkl`
