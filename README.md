@@ -29,14 +29,12 @@ The goal is to predict whether a customer will subscribe to a product **before m
 ## Structure
 
 train/ 
-endpoint/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── model_endpoint.py
 ├── requirements.txt
 ├── data/
 ├── results/ 
-    └── bank-full.csv
 
 ### 📦 Output:
 
