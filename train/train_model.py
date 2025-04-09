@@ -25,6 +25,8 @@ df['y'] = df['y'].map({'yes': 1, 'no': 0})
 X = df.drop(columns=["y"])
 y = df["y"]
 
+print(X.columns)
+
 # Definir las columnas categóricas
 categorical_cols = X.select_dtypes(include=["object"]).columns
 

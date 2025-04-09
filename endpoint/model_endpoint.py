@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import pickle
 import numpy as np
+import pandas as pd
 
 # Cargar el modelo entrenado y el preprocesador desde la carpeta 'results'
 with open('results/best_model.pkl', 'rb') as model_file:
@@ -14,8 +15,8 @@ app = Flask(__name__)
 
 # Define the expected feature names based on the dataset
 expected_features = [
-    'age', 'job', 'marital', 'education', 'default', 'housing', 'loan', 'contact',
-    'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome'
+    'age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan',
+    'campaign', 'pdays', 'previous'
 ]
 
 @app.route('/predict', methods=['POST'])
@@ -32,13 +33,13 @@ def predict():
         }), 400
 
     # Prepare the input data: Ensure the JSON data matches the order of expected features
-    input_data = np.array([[data[feature] for feature in expected_features]])
+    input_data = pd.DataFrame([data], columns=expected_features)
 
     # Preprocess the data (OneHotEncoding)
-    input_data_preprocessed = preprocessor.transform(input_data)
+    #input_data_preprocessed = preprocessor.transform(input_data)
 
     # Perform the prediction
-    prediction = model.predict(input_data_preprocessed)
+    prediction = model.predict(input_data)
 
     # Return the result as a JSON object
     return jsonify({'prediction': int(prediction[0])})
