@@ -1,4 +1,4 @@
-# 🧠 Bank Marketing Prediction – Dockerized MLOps Project
+# 🧠 Bank Marketing Prediction
 
 Version: **1.0.0**
 
