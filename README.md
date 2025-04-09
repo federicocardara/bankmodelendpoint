@@ -28,19 +28,10 @@ The goal is to predict whether a customer will subscribe to a product **before m
 
 ## Structure
 
-train/ 
+train/
 ├── Dockerfile
 ├── docker-compose.yml
-├── model_endpoint.py
-├── requirements.txt
-├── data/
-├── results/ 
-
-
-endpoint/
-├── Dockerfile
-├── docker-compose.yml
-├── model_endpoint.py
+├── train_model.py
 ├── requirements.txt
 
 ### 📦 Output:
