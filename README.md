@@ -40,9 +40,13 @@ docker compose up --build
 
 This project exposes the **best trained model** (from the `train/` project) as a **RESTful API** using Flask.
 
----
-
 ## 🧩 Structure
+
+endpoint/
+├── Dockerfile
+├── docker-compose.yml
+├── model_endpoint.py
+├── requirements.txt
 
 
 ## 🚀 Features
@@ -50,8 +54,6 @@ This project exposes the **best trained model** (from the `train/` project) as a
 - Loads `best_model.pkl` (a scikit-learn pipeline including preprocessing)
 - Exposes a **POST** endpoint at `/predict`
 - Returns the prediction (`0` or `1`) as JSON
-
----
 
 ## ⚙️ Setup Instructions
 
