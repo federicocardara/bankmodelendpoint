@@ -36,6 +36,13 @@ train/
 ├── data/
 ├── results/ 
 
+
+endpoint/
+├── Dockerfile
+├── docker-compose.yml
+├── model_endpoint.py
+├── requirements.txt
+
 ### 📦 Output:
 
 - Saved in `train/results/best_model.pkl`
