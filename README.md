@@ -27,12 +27,13 @@ The goal is to predict whether a customer will subscribe to a product **before m
 - Selects and saves the **best model** based on accuracy
 
 ## Structure
-
+```
 train/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── train_model.py
 ├── requirements.txt
+```
 
 ### 📦 Output:
 
@@ -43,6 +44,7 @@ train/
 ```bash
 cd train
 docker compose up --build
+```
 
 # 🌐 Bank Marketing API – Model Inference Service
 
@@ -50,12 +52,13 @@ This project exposes the **best trained model** (from the `train/` project) as a
 
 ## 🧩 Structure
 
+```
 endpoint/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── model_endpoint.py
 ├── requirements.txt
-
+```
 
 ## 🚀 Features
 
